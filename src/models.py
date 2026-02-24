@@ -12,6 +12,7 @@ from src import consts
 
 
 class InteractAction(BaseModel):
+    action: str = Field(description="Action type: 'fill', 'click', 'type', 'wait', 'wait_url', 'solve_turnstile'")
     selector: str | None = None
     value: str | None = None
     timeout: int = Field(default=30000, description="Timeout in milliseconds")
